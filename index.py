@@ -24,7 +24,7 @@ v = 119
 for note in range(11, 90):
     send_note_on(note, v)
     print(f"Sent note on for note number {note} for v number {v}")
-    time.sleep(0.7)
+    time.sleep(0.1)
     # v += 1  
     # Add a delay if needed to see the LEDs light up
 
