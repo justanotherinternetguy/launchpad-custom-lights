@@ -2,7 +2,7 @@ import mido
 import time
 
 # staring index: 11
-# 11-90 is index range
+# 11-89 is index range
 
 # List available output ports
 output_ports = mido.get_output_names()
@@ -24,7 +24,7 @@ v = 119
 for note in range(11, 90):
     send_note_on(note, v)
     print(f"Sent note on for note number {note} for v number {v}")
-    time.sleep(0.05)
+    time.sleep(0.7)
     # v += 1  
     # Add a delay if needed to see the LEDs light up
 
