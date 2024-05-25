@@ -63,7 +63,7 @@ while running:
                             outport.send(mido.Message('note_off', note=note))
                             print(note)
                         else:
-                            outport.send(mido.Message('note_on', note=note, velocity=119))
+                            outport.send(mido.Message('note_on', note=note, velocity=40))
                             print(note)
 
     # Clear the display

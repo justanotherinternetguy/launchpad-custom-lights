@@ -34,13 +34,13 @@ class Message():
         """
         return (y + 1) * 10 + (x + 1)
 
-    def range(self, x1: int, y1: int, x2: int, y2: int, red: float, green: float, blue: float):
+    def range(self, x1: int, y1: int, x2: int, y2: int, red: int, green: int, blue: int):
         """
         Sets a range of LEDs to the provided color.
         """
         for x in range(x1, x2+1):
             for y in range(y1, y2+1):
-                self.data[self.xy(x, y)] = [red*63, green*63, blue*63]
+                self.data[self.xy(x, y)] = [red, green, blue]
         return self
 
     def range_func(self, x1: int, y1: int, x2: int, y2: int, function: Callable[[int, int], List[float]]):
@@ -72,9 +72,9 @@ class Message():
         self.range(row, 0, row, 7, red, green, blue)
         return self
 
-    def note(self, x: int, y: int, red: float, green: float, blue: float):
+    def note(self, x: int, y: int, red: int, green: int, blue: int):
         """
         Sets a single LED to the provided color.
         """
-        self.data[self.xy(x, y)] = [red*63, green*63, blue*63]
+        self.data[self.xy(x, y)] = [red, green, blue]
         return self
