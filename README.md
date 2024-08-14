@@ -1,8 +1,6 @@
-# XLaunch
 
 Launchpad MK2 Controller testing
-
-# Special thanks to-
+#### Special thanks to-
 
 https://github.com/HitmanBobina47/launchpad_rgb
 
